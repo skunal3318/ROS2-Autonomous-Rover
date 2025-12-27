@@ -1,0 +1,11 @@
+# VS Code
+.vscode/
+
+# Build files
+build/
+install/
+log/
+
+# Gazebo / ROS junk
+*.db
+*.log
