@@ -1,0 +1,255 @@
+[0.202s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.202s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x716fe0283fe0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x716fe0283cb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x716fe0283cb0>>, mixin_verb=('build',))
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.262s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kunal-jazzy/vision_autonomous_rover'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extension 'ignore'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extension 'ignore_ament_install'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extensions ['colcon_pkg']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extension 'colcon_pkg'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extensions ['colcon_meta']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extension 'colcon_meta'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extensions ['ros']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_rover_description) by extension 'ros'
+[0.336s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autonomous_rover_description' with type 'ros.ament_cmake' and name 'autonomous_rover_description'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_bringup) by extension 'ros'
+[0.340s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rover_bringup' with type 'ros.ament_cmake' and name 'rover_bringup'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_control) by extension 'ros'
+[0.341s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rover_control' with type 'ros.ament_python' and name 'rover_control'
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.378s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.378s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.382s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/kunal-jazzy/vision_autonomous_rover/install
+[0.383s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/kunal-jazzy/my_robot_ws/install
+[0.384s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 319 installed packages in /opt/ros/jazzy
+[0.387s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'cmake_args' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'cmake_target' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'autonomous_rover_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.457s] DEBUG:colcon.colcon_core.verb:Building package 'autonomous_rover_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description', 'merge_install': False, 'path': '/home/kunal-jazzy/vision_autonomous_rover/src/autonomous_rover_description', 'symlink_install': False, 'test_result_base': None}
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'cmake_target' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.458s] DEBUG:colcon.colcon_core.verb:Building package 'rover_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kunal-jazzy/vision_autonomous_rover/build/rover_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control', 'merge_install': False, 'path': '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control', 'symlink_install': False, 'test_result_base': None}
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'cmake_args' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'cmake_target' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rover_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.459s] DEBUG:colcon.colcon_core.verb:Building package 'rover_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup', 'merge_install': False, 'path': '/home/kunal-jazzy/vision_autonomous_rover/src/rover_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.459s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.460s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.461s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kunal-jazzy/vision_autonomous_rover/src/autonomous_rover_description' with build type 'ament_cmake'
+[0.461s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kunal-jazzy/vision_autonomous_rover/src/autonomous_rover_description'
+[0.464s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.464s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.464s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.470s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control' with build type 'ament_python'
+[0.470s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_control', 'ament_prefix_path')
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/hook/ament_prefix_path.ps1'
+[0.471s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/hook/ament_prefix_path.dsv'
+[0.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/hook/ament_prefix_path.sh'
+[0.475s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.475s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description -- -j12 -l12
+[0.881s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control'
+[0.881s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.881s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.887s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description -- -j12 -l12
+[0.901s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description
+[0.921s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_rover_description)
+[0.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description
+[0.927s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description' for CMake module files
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description' for CMake config files
+[0.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_rover_description', 'cmake_prefix_path')
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/hook/cmake_prefix_path.ps1'
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/hook/cmake_prefix_path.dsv'
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/hook/cmake_prefix_path.sh'
+[0.931s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/bin'
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/lib/pkgconfig/autonomous_rover_description.pc'
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/lib/python3.12/site-packages'
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/bin'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.ps1'
+[0.934s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.dsv'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.sh'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.bash'
+[0.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.zsh'
+[0.938s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/colcon-core/packages/autonomous_rover_description)
+[0.939s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_rover_description)
+[0.939s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description' for CMake module files
+[0.940s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description' for CMake config files
+[0.940s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_rover_description', 'cmake_prefix_path')
+[0.940s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/hook/cmake_prefix_path.ps1'
+[0.941s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/hook/cmake_prefix_path.dsv'
+[0.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/hook/cmake_prefix_path.sh'
+[0.943s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/bin'
+[0.943s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/lib/pkgconfig/autonomous_rover_description.pc'
+[0.943s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/lib/python3.12/site-packages'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/bin'
+[0.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.ps1'
+[0.946s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.dsv'
+[0.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.sh'
+[0.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.bash'
+[0.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.zsh'
+[0.948s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/colcon-core/packages/autonomous_rover_description)
+[0.949s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_bringup' with build type 'ament_cmake'
+[0.949s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_bringup'
+[0.950s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.950s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.964s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup': CMAKE_PREFIX_PATH=/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description:/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup -- -j12 -l12
+[1.028s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup' returned '0': CMAKE_PREFIX_PATH=/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description:/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup -- -j12 -l12
+[1.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup': CMAKE_PREFIX_PATH=/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description:/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup
+[1.057s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_bringup)
+[1.057s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup' for CMake module files
+[1.058s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup' returned '0': CMAKE_PREFIX_PATH=/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description:/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_bringup:/home/kunal-jazzy/my_robot_ws/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kunal-jazzy/vision_autonomous_rover/build/rover_bringup
+[1.059s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup' for CMake config files
+[1.060s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_bringup', 'cmake_prefix_path')
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/hook/cmake_prefix_path.ps1'
+[1.061s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/hook/cmake_prefix_path.dsv'
+[1.062s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/hook/cmake_prefix_path.sh'
+[1.063s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/bin'
+[1.063s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/lib/pkgconfig/rover_bringup.pc'
+[1.064s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/lib/python3.12/site-packages'
+[1.064s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/bin'
+[1.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.ps1'
+[1.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.dsv'
+[1.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.sh'
+[1.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.bash'
+[1.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.zsh'
+[1.068s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/colcon-core/packages/rover_bringup)
+[1.068s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_bringup)
+[1.069s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup' for CMake module files
+[1.069s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup' for CMake config files
+[1.070s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_bringup', 'cmake_prefix_path')
+[1.070s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/hook/cmake_prefix_path.ps1'
+[1.071s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/hook/cmake_prefix_path.dsv'
+[1.071s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/hook/cmake_prefix_path.sh'
+[1.072s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/bin'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/lib/pkgconfig/rover_bringup.pc'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/lib/python3.12/site-packages'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/bin'
+[1.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.ps1'
+[1.075s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.dsv'
+[1.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.sh'
+[1.076s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.bash'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/rover_bringup/package.zsh'
+[1.077s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kunal-jazzy/vision_autonomous_rover/install/rover_bringup/share/colcon-core/packages/rover_bringup)
+[1.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kunal-jazzy/vision_autonomous_rover/build/rover_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_control build --build-base /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/build install --record /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/install.log --single-version-externally-managed install_data
+[2.986s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control' for CMake module files
+[2.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kunal-jazzy/vision_autonomous_rover/build/rover_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_control build --build-base /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/build install --record /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/install.log --single-version-externally-managed install_data
+[2.989s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control' for CMake config files
+[2.990s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib'
+[2.990s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/bin'
+[2.991s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/pkgconfig/rover_control.pc'
+[2.991s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages'
+[2.992s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_control', 'pythonpath')
+[2.992s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/hook/pythonpath.ps1'
+[2.993s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/hook/pythonpath.dsv'
+[2.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/hook/pythonpath.sh'
+[2.996s] Level 1:colcon.colcon_core.environment:checking '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/bin'
+[2.996s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_control)
+[2.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/package.ps1'
+[2.998s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/package.dsv'
+[3.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/package.sh'
+[3.001s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/package.bash'
+[3.001s] INFO:colcon.colcon_core.shell:Creating package script '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/rover_control/package.zsh'
+[3.002s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/share/colcon-core/packages/rover_control)
+[3.002s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.003s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.004s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.004s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.023s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.023s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.023s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.067s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.068s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kunal-jazzy/vision_autonomous_rover/install/local_setup.ps1'
+[3.071s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kunal-jazzy/vision_autonomous_rover/install/_local_setup_util_ps1.py'
+[3.075s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kunal-jazzy/vision_autonomous_rover/install/setup.ps1'
+[3.078s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kunal-jazzy/vision_autonomous_rover/install/local_setup.sh'
+[3.080s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kunal-jazzy/vision_autonomous_rover/install/_local_setup_util_sh.py'
+[3.081s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kunal-jazzy/vision_autonomous_rover/install/setup.sh'
+[3.082s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kunal-jazzy/vision_autonomous_rover/install/local_setup.bash'
+[3.083s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kunal-jazzy/vision_autonomous_rover/install/setup.bash'
+[3.085s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kunal-jazzy/vision_autonomous_rover/install/local_setup.zsh'
+[3.085s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kunal-jazzy/vision_autonomous_rover/install/setup.zsh'

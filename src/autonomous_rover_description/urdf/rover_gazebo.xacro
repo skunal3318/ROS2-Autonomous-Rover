@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- <gazebo reference="base_left_back_joint">
+        <mu1 value="1.2" />
+        <mu2 value="1.2" />
+  </gazebo>
+
+  <gazebo reference="base_right_back_joint">
+        <mu1 value="0.1" />
+        <mu2 value="0.1" />
+  </gazebo> -->
+
+  <gazebo>
+        <plugin
+            filename="gz-sim-diff-drive-system"
+            name="gz::sim::systems::DiffDrive">
+            <left_joint>base_left_back_joint</left_joint>
+
+            <right_joint>base_right_back_joint</right_joint>
+            <!-- <right_joint>right_front_joint</right_joint> -->
+
+            <frame_id>odom</frame_id>
+            <child_frame_id>base_footprint</child_frame_id>
+            <wheel_separation>0.30</wheel_separation>
+            <wheel_radius>0.06</wheel_radius>
+
+            <!-- <cmd_vel_timeout>0.5</cmd_vel_timeout> -->
+        </plugin>
+  </gazebo>
+
+
+  <gazebo>
+    <plugin
+        filename="gz-sim-joint-state-publisher-system"
+        name="gz::sim::systems::JointStatePublisher">
+    </plugin>
+
+  </gazebo>
+
+  <!-- <gazebo>
+    <plugin filename="gz-sim-sensors-system"
+            name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+  </gazebo>
+
+  
+  <gazebo reference="lidar_link">
+    <sensor name="lidar_sensor" type="gpu_lidar">
+
+      
+      <frame_id>lidar_link</frame_id> 
+
+      <topic>scan</topic>
+      <update_rate>10</update_rate>
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+
+          
+          <vertical>
+            <samples>1</samples>
+            <resolution>0.1</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>0.0</max_angle>
+          </vertical>
+        </scan>
+
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </lidar>
+
+    </sensor>
+  </gazebo> 
+
+  <gazebo>
+    <plugin
+      filename="gz-sim-clock-system"
+      name="gz::sim::systems::Clock">
+    </plugin>
+  </gazebo> -->
+
+</robot>

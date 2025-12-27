@@ -1,0 +1,46 @@
+[0.007s] Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/autonomous_rover/install/vision_autonomous_rover:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kunal-jazzy/vision_autonomous_rover/src/autonomous_rover_description -DCMAKE_INSTALL_PREFIX=/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description
+[0.148s] -- The C compiler identification is GNU 13.3.0
+[0.248s] -- The CXX compiler identification is GNU 13.3.0
+[0.267s] -- Detecting C compiler ABI info
+[0.373s] -- Detecting C compiler ABI info - done
+[0.379s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.380s] -- Detecting C compile features
+[0.380s] -- Detecting C compile features - done
+[0.388s] -- Detecting CXX compiler ABI info
+[0.499s] -- Detecting CXX compiler ABI info - done
+[0.506s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.506s] -- Detecting CXX compile features
+[0.506s] -- Detecting CXX compile features - done
+[0.514s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.637s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.798s] -- Configuring done (0.8s)
+[0.799s] -- Generating done (0.0s)
+[0.800s] -- Build files have been written to: /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description
+[0.804s] Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/autonomous_rover/install/vision_autonomous_rover:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kunal-jazzy/vision_autonomous_rover/src/autonomous_rover_description -DCMAKE_INSTALL_PREFIX=/home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description
+[0.806s] Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/autonomous_rover/install/vision_autonomous_rover:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description -- -j12 -l12
+[0.843s] Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/autonomous_rover/install/vision_autonomous_rover:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description -- -j12 -l12
+[0.857s] Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/autonomous_rover/install/vision_autonomous_rover:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description
+[0.868s] -- Install configuration: ""
+[0.868s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//urdf
+[0.868s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//urdf/common_properties.xacro
+[0.868s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//urdf/rover.urdf.xacro
+[0.868s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//rviz
+[0.868s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//rviz/urdf_config.rviz
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//launch
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description//launch/display.launch.xml
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/ament_index/resource_index/package_run_dependencies/autonomous_rover_description
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/ament_index/resource_index/parent_prefix_path/autonomous_rover_description
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/environment/ament_prefix_path.sh
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/environment/ament_prefix_path.dsv
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/environment/path.sh
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/environment/path.dsv
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/local_setup.bash
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/local_setup.sh
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/local_setup.zsh
+[0.869s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/local_setup.dsv
+[0.870s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.dsv
+[0.870s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/ament_index/resource_index/packages/autonomous_rover_description
+[0.870s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/cmake/autonomous_rover_descriptionConfig.cmake
+[0.870s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/cmake/autonomous_rover_descriptionConfig-version.cmake
+[0.870s] -- Installing: /home/kunal-jazzy/vision_autonomous_rover/install/autonomous_rover_description/share/autonomous_rover_description/package.xml
+[0.871s] Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kunal-jazzy/autonomous_rover/install/vision_autonomous_rover:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kunal-jazzy/vision_autonomous_rover/build/autonomous_rover_description

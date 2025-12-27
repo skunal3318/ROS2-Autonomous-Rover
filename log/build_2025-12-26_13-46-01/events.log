@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.000371] (-) JobUnselected: {'identifier': 'autonomous_rover_description'}
+[0.000538] (-) JobUnselected: {'identifier': 'rover_bringup'}
+[0.000699] (rover_control) JobQueued: {'identifier': 'rover_control', 'dependencies': OrderedDict()}
+[0.000751] (rover_control) JobStarted: {'identifier': 'rover_control'}
+[0.099843] (-) TimerEvent: {}
+[0.152165] (rover_control) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 54, in build\n    data_files = get_data_files_mapping(\n                 ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 46, in get_data_files_mapping\n    assert not os.path.isabs(data_file)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "<frozen posixpath>", line 62, in isabs\nTypeError: expected str, bytes or os.PathLike object, not list\n'}
+[0.152737] (rover_control) JobEnded: {'identifier': 'rover_control', 'rc': 1}
+[0.162431] (-) EventReactorShutdown: {}

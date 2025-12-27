@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <material name="black">
+        <color rgba="0.05 0.05 0.05 1" />
+    </material>
+
+    <material name="graphite_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+    </material>
+
+    <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1.0"/>
+    </material>
+
+    <material name="light_gray">
+        <color rgba="0.35 0.35 0.35 1.0" />
+    </material>
+
+    <material name="metallic_gray">
+        <color rgba="0.25 0.25 0.25 1.0"/>
+    </material>
+
+    <material name="dark_gray">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+    </material>
+
+    <material name="camera_blue">
+        <color rgba="0.2 0.4 0.8 1.0"/>
+    </material>
+
+    <material name="lens_black">
+        <color rgba="0.01 0.01 0.01 1.0"/>
+    </material>
+
+    <!-- <material name="silver">
+        <color rgba="191 191 191 1"/>
+    </material> -->
+
+    <!-- <material name="blue">
+        <color rgba="42 97 161 1" />
+    </material> -->
+
+    <xacro:macro name="box_inertia" params="m x y z o_xyz o_rpy">
+        <inertial>
+            <mass value="${m}" />
+            <origin xyz="${o_xyz}" rpy="${o_rpy}" />
+            <inertia ixx="${(m/12) * (z*z + y*y)}" ixy="0" ixz="0"
+                    iyy="${(m/12) * (x*x + z*z)}" iyz="0"
+                    izz="${(m/12) * (x*x + y*y)}" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="cylinder_inertia" params="m r l o_xyz o_rpy">
+        <inertial>
+            <mass value="${m}" />
+            <origin xyz="${o_xyz}" rpy="${o_rpy}" />
+            <inertia ixx="${(m/12) * (3*r*r + l*l)}" ixy="0" ixz="0"
+                    iyy="${(m/12) * (3*r*r + l*l)}" iyz="0"
+                    izz="${(m/2) * (r*r)}" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="sphere_inertia" params="m r o_xyz o_rpy">
+        <inertial>
+            <mass value="${m}" />
+            <origin xyz="${o_xyz}" rpy="${o_rpy}" />
+            <inertia ixx="${(2/5) * m * r * r}" ixy="0" ixz="0"
+                    iyy="${(2/5) * m * r * r}" iyz="0"
+                    izz="${(2/5) * m * r * r}" />
+        </inertial>
+    </xacro:macro>
+
+</robot>

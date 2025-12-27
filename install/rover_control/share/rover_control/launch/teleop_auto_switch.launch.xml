@@ -1,0 +1,26 @@
+<launch>
+
+    <!-- TELEOP KEYBOARD (MANUAL MODE) -->
+    <node
+        pkg="teleop_twist_keyboard"
+        exec="teleop_twist_keyboard"
+        name="teleop_keyboard"
+        output="screen">
+        <remap from="/cmd_vel" to="/cmd_vel_teleop"/>
+    </node>
+
+    <!-- OBSTACLE AVOIDANCE (AUTO MODE) -->
+    <node
+        pkg="rover_control"
+        exec="obstacle_avoidance"
+        name="obstacle_avoidance"
+        output="screen"/>
+
+    <!-- CMD_VEL SWITCH NODE -->
+    <node
+        pkg="rover_control"
+        exec="cmd_vel_switch"
+        name="cmd_vel_switch"
+        output="screen"/>
+
+</launch>

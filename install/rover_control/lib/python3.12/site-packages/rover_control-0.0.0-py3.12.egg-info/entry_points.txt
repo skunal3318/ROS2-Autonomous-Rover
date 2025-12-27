@@ -1,0 +1,3 @@
+[console_scripts]
+cmd_vel_switch = rover_control.cmd_vel_switch:main
+obstacle_avoidance = rover_control.obstacle_avoidance:main
