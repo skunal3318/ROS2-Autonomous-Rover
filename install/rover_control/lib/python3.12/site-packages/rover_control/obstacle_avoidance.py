@@ -8,122 +8,116 @@ import math
 import time
 
 
-class ObstacleAvoidance(Node):
+class FSMObstacleAvoidance(Node):
 
     def __init__(self):
-        super().__init__('obstacle_avoidance_fsm')
+        super().__init__('fsm_obstacle_avoidance')
 
-        # Subscriber
-        self.scan_sub = self.create_subscription(
-            LaserScan,
-            '/scan',
-            self.scan_callback,
-            10
-        )
+        self.sub = self.create_subscription(
+            LaserScan, '/scan', self.scan_callback, 10)
 
-        # Publisher (ONLY cmd_vel)
-        self.cmd_pub = self.create_publisher(
-            Twist,
-            '/cmd_vel',
-            10
-        )
+        self.pub = self.create_publisher(
+            Twist, '/cmd_vel', 10)
 
-        # Timer
         self.timer = self.create_timer(0.1, self.control_loop)
 
-        # Parameters
-        self.safe_dist = 0.6
+        # ---------------- PARAMETERS ----------------
+        self.front_limit = 0.7
+        self.side_limit = 1.0
+
         self.forward_speed = 0.18
         self.reverse_speed = -0.15
         self.turn_speed = 0.7
 
-        self.stop_time = 0.3
-        self.reverse_time = 2.0
-        self.turn_time = 2.0
+        self.reverse_time = 1.0
+        self.turn_min_time = 0.8
+        self.escape_time = 3.0
 
-        # FSM state
+        # ---------------- FSM ----------------
         self.state = "FORWARD"
-        self.state_start_time = time.time()
+        self.state_start = time.time()
+        self.turn_dir = None   # LEFT or RIGHT
 
-        # Lidar data
-        self.front_min = float('inf')
-        self.left_min = float('inf')
-        self.right_min = float('inf')
+        # ---------------- LIDAR ----------------
+        self.front = float('inf')
+        self.left = float('inf')
+        self.right = float('inf')
 
-        self.get_logger().info("FSM Obstacle Avoidance Node Started")
+        self.get_logger().info("FSM Obstacle Avoidance (Beginner Safe) Started")
 
-    # -------------------------
-    # LIDAR CALLBACK
-    # -------------------------
+    # ---------------- LIDAR ----------------
     def scan_callback(self, msg):
         ranges = msg.ranges
         n = len(ranges)
 
         def clean(data):
-            return [d for d in data if not math.isinf(d) and not math.isnan(d)]
+            return [d for d in data if not math.isnan(d) and not math.isinf(d)]
 
-        front = clean(ranges[int(0.45*n):int(0.55*n)])
+        front = clean(ranges[int(0.47*n):int(0.53*n)])
         left  = clean(ranges[int(0.65*n):int(0.85*n)])
         right = clean(ranges[int(0.15*n):int(0.35*n)])
 
-        self.front_min = min(front) if front else float('inf')
-        self.left_min  = min(left) if left else float('inf')
-        self.right_min = min(right) if right else float('inf')
+        self.front = min(front) if front else float('inf')
+        self.left  = sum(left)/len(left) if left else float('inf')
+        self.right = sum(right)/len(right) if right else float('inf')
 
-    # -------------------------
-    # FSM CONTROL LOOP
-    # -------------------------
+    # ---------------- FSM ----------------
     def control_loop(self):
         cmd = Twist()
         now = time.time()
 
         # -------- FORWARD --------
         if self.state == "FORWARD":
-            if self.front_min < self.safe_dist:
-                self.state = "STOP"
-                self.state_start_time = now
+            if self.front < self.front_limit:
+                self.state = "REVERSE"
+                self.state_start = now
             else:
                 cmd.linear.x = self.forward_speed
-
-        # -------- STOP --------
-        elif self.state == "STOP":
-            if now - self.state_start_time > self.stop_time:
-                self.state = "REVERSE"
-                self.state_start_time = now
 
         # -------- REVERSE --------
         elif self.state == "REVERSE":
             cmd.linear.x = self.reverse_speed
-            if now - self.state_start_time > self.reverse_time:
-                self.state = "SCAN"
-                self.state_start_time = now
 
-        # -------- SCAN --------
-        elif self.state == "SCAN":
-            if self.left_min > self.right_min:
-                self.state = "TURN_LEFT"
+            if now - self.state_start > self.reverse_time:
+                # Choose turn direction ONCE
+                self.turn_dir = "LEFT" if self.left > self.right else "RIGHT"
+                self.state = "TURN"
+                self.state_start = now
+
+        # -------- TURN --------
+        elif self.state == "TURN":
+
+            if self.turn_dir == "LEFT":
+                cmd.angular.z = self.turn_speed
+                side_clear = self.left
             else:
-                self.state = "TURN_RIGHT"
-            self.state_start_time = now
+                cmd.angular.z = -self.turn_speed
+                side_clear = self.right
 
-        # -------- TURN LEFT --------
-        elif self.state == "TURN_LEFT":
+            # ✔ Ignore front completely
+            if side_clear > self.side_limit and \
+               now - self.state_start > self.turn_min_time:
+                self.state = "FORWARD"
+
+            # ESCAPE if turning too long
+            elif now - self.state_start > self.escape_time:
+                self.state = "ESCAPE"
+                self.state_start = now
+
+        # -------- ESCAPE --------
+        elif self.state == "ESCAPE":
+            cmd.linear.x = self.reverse_speed
             cmd.angular.z = self.turn_speed
-            if now - self.state_start_time > self.turn_time:
+
+            if now - self.state_start > 1.5:
                 self.state = "FORWARD"
 
-        # -------- TURN RIGHT --------
-        elif self.state == "TURN_RIGHT":
-            cmd.angular.z = -self.turn_speed
-            if now - self.state_start_time > self.turn_time:
-                self.state = "FORWARD"
-
-        self.cmd_pub.publish(cmd)
+        self.pub.publish(cmd)
 
 
 def main():
     rclpy.init()
-    node = ObstacleAvoidance()
+    node = FSMObstacleAvoidance()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

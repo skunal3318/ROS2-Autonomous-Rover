@@ -1,0 +1,25 @@
+[0.781s] Invoking command in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kunal-jazzy/vision_autonomous_rover/build/rover_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_control build --build-base /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/build install --record /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/install.log --single-version-externally-managed install_data
+[1.035s] running egg_info
+[1.051s] writing ../../build/rover_control/rover_control.egg-info/PKG-INFO
+[1.051s] writing dependency_links to ../../build/rover_control/rover_control.egg-info/dependency_links.txt
+[1.051s] writing entry points to ../../build/rover_control/rover_control.egg-info/entry_points.txt
+[1.051s] writing requirements to ../../build/rover_control/rover_control.egg-info/requires.txt
+[1.052s] writing top-level names to ../../build/rover_control/rover_control.egg-info/top_level.txt
+[1.083s] reading manifest file '../../build/rover_control/rover_control.egg-info/SOURCES.txt'
+[1.084s] writing manifest file '../../build/rover_control/rover_control.egg-info/SOURCES.txt'
+[1.084s] running build
+[1.084s] running build_py
+[1.084s] copying rover_control/obstacle_avoidance.py -> /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/build/lib/rover_control
+[1.085s] running install
+[1.091s] running install_lib
+[1.108s] copying /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/build/lib/rover_control/obstacle_avoidance.py -> /home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages/rover_control
+[1.108s] byte-compiling /home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages/rover_control/obstacle_avoidance.py to obstacle_avoidance.cpython-312.pyc
+[1.109s] running install_data
+[1.110s] running install_egg_info
+[1.135s] removing '/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages/rover_control-0.0.0-py3.12.egg-info' (and everything under it)
+[1.135s] Copying ../../build/rover_control/rover_control.egg-info to /home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages/rover_control-0.0.0-py3.12.egg-info
+[1.135s] running install_scripts
+[1.240s] Installing cmd_vel_switch script to /home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/rover_control
+[1.240s] Installing obstacle_avoidance script to /home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/rover_control
+[1.240s] writing list of installed files to '/home/kunal-jazzy/vision_autonomous_rover/build/rover_control/install.log'
+[1.281s] Invoked command in '/home/kunal-jazzy/vision_autonomous_rover/src/rover_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kunal-jazzy/vision_autonomous_rover/build/rover_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kunal-jazzy/vision_autonomous_rover/install/rover_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_control build --build-base /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/build install --record /home/kunal-jazzy/vision_autonomous_rover/build/rover_control/install.log --single-version-externally-managed install_data
