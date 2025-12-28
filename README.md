@@ -95,3 +95,10 @@ ros2 launch rover_bringup rover.launch.xml
 
 # Run obstacle avoidance node
 ros2 run rover_control obstacle_avoidance.py
+
+```
+
+## 📜 License
+
+This project is licensed under the MIT License.  
+See [LICENSE.md](./LICENSE.md) for details.
