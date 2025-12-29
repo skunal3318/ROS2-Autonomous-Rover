@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
@@ -13,7 +11,6 @@ class ObstacleAvoidance(Node):
     def __init__(self):
         super().__init__('obstacle_avoidance_fsm')
 
-        # Subscriber
         self.scan_sub = self.create_subscription(
             LaserScan,
             '/scan',
@@ -21,17 +18,13 @@ class ObstacleAvoidance(Node):
             10
         )
 
-        # Publisher (ONLY cmd_vel)
         self.cmd_pub = self.create_publisher(
             Twist,
             '/cmd_vel',
             10
         )
-
-        # Timer
         self.timer = self.create_timer(0.1, self.control_loop)
 
-        # Parameters
         self.safe_dist = 0.6
         self.forward_speed = 0.18
         self.reverse_speed = -0.15
@@ -41,20 +34,15 @@ class ObstacleAvoidance(Node):
         self.reverse_time = 2.0
         self.turn_time = 2.0
 
-        # FSM state
         self.state = "FORWARD"
         self.state_start_time = time.time()
 
-        # Lidar data
         self.front_min = float('inf')
         self.left_min = float('inf')
         self.right_min = float('inf')
 
         self.get_logger().info("FSM Obstacle Avoidance Node Started")
 
-    # -------------------------
-    # LIDAR CALLBACK
-    # -------------------------
     def scan_callback(self, msg):
         ranges = msg.ranges
         n = len(ranges)
@@ -70,9 +58,6 @@ class ObstacleAvoidance(Node):
         self.left_min  = min(left) if left else float('inf')
         self.right_min = min(right) if right else float('inf')
 
-    # -------------------------
-    # FSM CONTROL LOOP
-    # -------------------------
     def control_loop(self):
         cmd = Twist()
         now = time.time()
