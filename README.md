@@ -4,101 +4,140 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/ROS2-Jazzy-blue" alt="ROS2 Jazzy">
-  <img src="https://img.shields.io/badge/Simulation-Gazebo-green" alt="Gazebo">
+  <img src="https://img.shields.io/badge/Simulation-Gazebo%20Sim-green" alt="Gazebo Sim">
+  <img src="https://img.shields.io/badge/Perception-Camera--Based-orange" alt="Camera Based Perception">
   <img src="https://img.shields.io/badge/Status-Active-success" alt="Project Status">
 </p>
 
-*ROS2 Autonomous Rover* is a **simulation-first autonomous mobile robot** built using **ROS 2 (Jazzy)** and **Gazebo (gz-sim)**.  
-The project focuses on **core autonomy concepts** such as perception, decision-making, and control, implemented through a clean ROS2 architecture and a finite state machine (FSM).
+# ROS 2 Camera-Based Autonomous Rover
+
+**ROS2 Camera-Based Autonomous Rover** is a **simulation-first mobile robotics project** built using **ROS 2 (Jazzy)** and **Gazebo Sim (gz-sim)**.  
+The project focuses on **vision-based perception**, **obstacle reasoning**, and **clean ROS 2 architecture**, with an emphasis on **explainable autonomy** rather than black-box navigation.
+
+This repository is structured to scale from **pure visualization → perception → decision-making → control**.
 
 ---
 
 ## 🌟 Why This Project?
 
 This project was built to:
-- Understand **end-to-end autonomous robot architecture**
-- Practice **ROS2 node-based design**
-- Implement **FSM-driven obstacle avoidance**
-- Bridge the gap between **simulation and real-world robotics**
 
-The rover is designed to move autonomously in a simulated environment while reacting to obstacles using LiDAR-based perception.
+- Understand **camera-based perception pipelines**
+- Practice **clean ROS 2 package separation**
+- Develop **obstacle avoidance without LiDAR**
+- Visualize **what the robot “sees” and “decides”**
+- Build autonomy incrementally instead of end-to-end black boxes
 
----
-
-## 🚗 Rover Capabilities
-
-- 🧭 **Autonomous Forward Navigation**
-- 🚧 **LiDAR-Based Obstacle Detection**
-- 🔄 **FSM-Controlled Obstacle Avoidance**
-  - Forward → Stop → Reverse → Scan → Turn → Forward
-- 🎥 **Camera Integration** (for perception & visualization)
-- 🕹️ **Manual Teleoperation Support**
-- 🔌 **ROS2 Topic-Based Control (`cmd_vel`)**
-- 🧪 **Fully Simulated in Gazebo (gz-sim)**
+The rover operates in a simulated environment and detects obstacles **purely from RGB camera input**, making it suitable for low-cost real-world robots.
 
 ---
 
-## 🧠 System Architecture
+## 🚗 Rover Capabilities (Current)
 
-The rover follows a modular ROS2 design:
+- 🎥 **RGB Camera Integration**
+- 👁️ **Camera-Based Obstacle Detection**
+- 📐 **Region-of-Interest (ROI) Processing**
+- 🧱 **Edge-Based Obstacle Reasoning**
+- 🧠 **Left / Center / Right Obstacle Classification**
+- 🖼️ **Real-Time Perception Visualization**
+- 🧪 **Fully Simulated in Gazebo Sim**
 
-- **Gazebo Simulation**
-  - Robot model (URDF/Xacro)
-  - Sensors (LiDAR, Camera)
-- **ROS2 Nodes**
-  - Sensor processing
-  - FSM-based control logic
-  - Velocity command publisher
-- **Visualization**
-  - RViz2
-  - `rqt_graph`
-
-This separation ensures clarity, scalability, and easy transition to real hardware.
+> 🚧 Motion control and FSM-based navigation are intentionally **not enabled yet** to maintain perception clarity.
 
 ---
 
-## 🔄 Finite State Machine (FSM)
+## 🧠 Perception Pipeline
 
-The obstacle avoidance behavior is driven by a simple but effective FSM:
+The obstacle avoidance logic follows a transparent vision pipeline:
 
-1. **FORWARD** – Move straight
-2. **STOP** – Brief halt on obstacle detection
-3. **REVERSE** – Move backward to create space
-4. **SCAN** – Compare left vs right clearance
-5. **TURN_LEFT / TURN_RIGHT** – Rotate toward safer direction
-6. **FORWARD** – Resume motion
+1. **RGB Image Acquisition**
+2. **ROI Cropping (Front View)**
+3. **Grayscale Conversion**
+4. **Gaussian Blur**
+5. **Canny Edge Detection**
+6. **Spatial Analysis**
+   - Left / Center / Right regions
+7. **Obstacle Decision Output**
+   - `LEFT`, `CENTER`, `RIGHT`, or `NONE`
 
-This approach avoids black-box planners and emphasizes **decision-making transparency**.
+This approach prioritizes **interpretability and debugging visibility**.
+
+---
+
+## 🧩 System Architecture
+
+The project uses a **modular ROS 2 design**:
+
+### 🧱 Simulation
+- Gazebo Sim (gz-sim)
+- Custom rover URDF/Xacro
+- RGB camera sensor
+
+### 🧠 ROS 2 Packages
+- **four_wheel_description**
+  - Robot model
+  - Sensors
+  - Gazebo integration
+- **four_control**
+  - Camera visualization
+  - Obstacle perception logic
+  - Decision reasoning (no control yet)
+
+### 👀 Visualization
+- OpenCV windows (camera + ROI edges)
+- Gazebo Sim GUI
+- RViz2 (optional)
+
+This separation ensures:
+- Easy debugging
+- Clear responsibility boundaries
+- Smooth transition to real hardware later
+
+---
+
+## 🧪 Obstacle Avoidance Logic (Camera-Based)
+
+Obstacle detection is performed using **image structure**, not distance sensors.
+
+Decision logic:
+
+- **CENTER obstacle** → highest priority
+- **LEFT obstacle** → free space likely on right
+- **RIGHT obstacle** → free space likely on left
+- **NONE** → clear path
+
+The result is visualized directly on the processed image to ensure **decision correctness before control is enabled**.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **ROS 2 Jazzy**
-- **Gazebo (gz-sim)**
+- **Gazebo Sim (gz-sim)**
 - **Python (rclpy)**
+- **OpenCV**
+- **cv_bridge**
 - **URDF / Xacro**
 - **RViz2**
-- **rqt_graph**
 
 ---
 
 ## ▶️ How to Run
 
+### Build the workspace
 ```bash
-# Build the workspace
 colcon build
 source install/setup.bash
 
-# Launch the simulation
-ros2 launch rover_bringup rover.launch.xml
-
-# Run obstacle avoidance node
-ros2 run rover_control obstacle_avoidance.py
-
 ```
 
-## 📜 License
+### Launch the rover in Gazebo
+```bash
+ros2 launch four_wheel_description rover.launch.py
+```
 
-This project is licensed under the MIT License.  
-See [LICENSE.md](./LICENSE.md) for details.
+### Run camera-based obstacle visualization
+```bash
+ros2 launch four_control visualization.launch.py
+```
+
