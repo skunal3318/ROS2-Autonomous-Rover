@@ -16,6 +16,14 @@ A <b>simulation-first autonomous mobile robot</b> built using <b>ROS 2 (Jazzy)</
 
 ---
 
+## 🎥 Demo
+
+<p align="center">
+  <img src="videos/demo.png" width="800">
+</p>
+
+---
+
 ## 🌟 Why This Project?
 
 This project was developed to:
